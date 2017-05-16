@@ -1,5 +1,5 @@
 ```
-1. Get the cors.lua from (here) [https://gist.github.com/VinayBhalerao/9964676cbce76f5a433cbfedc7a7a1ea]
+1. Get the cors.lua from directory
 ```
 
 Use `configMaps` to mount the file
