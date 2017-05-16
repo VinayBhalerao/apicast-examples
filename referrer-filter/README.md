@@ -1,4 +1,4 @@
-##Make sure you have enabled `Referrer filters` in 3scale admin portal and added the IP/hostname to the applications
+### Make sure you have enabled `Referrer filters` in 3scale admin portal and added the IP/hostname to the applications
 
 ```sh
 Place the apicast.conf in directory
