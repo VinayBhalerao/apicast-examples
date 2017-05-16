@@ -1,5 +1,5 @@
 ```sh
-oc new-project 3scalegateway
+oc new-project apicast-gateway
 
 oc new-build https://github.com/VinayBhalerao/custom-gateway.git --strategy=docker
 
