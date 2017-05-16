@@ -1,4 +1,4 @@
-```
+```sh
 Get the cors.lua from [here] (https://gist.github.com/VinayBhalerao/9964676cbce76f5a433cbfedc7a7a1ea)
 
 Start the docker container using below command
