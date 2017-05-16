@@ -1,15 +1,11 @@
 ```sh
-1. Get the cors.lua from directory
-```
+Get the cors.lua from directory
 
-Use `configMaps` to mount the file
-
-```
 oc create configmap cors --from-file=./cors.lua
 
 oc volume dc/apicast --add --name=apicast -m /opt/app-root/src/src -t configmap --configmap-name=cors
 
-### results in error in deployment due to bug in Kubernetes. Proceed to next step
+### results in error in deployment due to bug in Kubernetes. Proceed to next step###
 
 oc edit dc apicast
 
@@ -25,7 +21,8 @@ Save and exit
 oc get pods
 
 oc rsh <apicast-podname>
-ls /opt/app-root/src/src/ #inside the pod.Verify if cors.lua is present
+
+ls /opt/app-root/src/src/ #inside the pod. verify if `cors.lua` is present.
 
 oc env dc/apicast APICAST_MODULE=/opt/app-root/src/src/verbose.lua #set env variable
 ```
