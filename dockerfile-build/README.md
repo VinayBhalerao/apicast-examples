@@ -14,6 +14,8 @@ oc get pods
 oc rsh apicast-<name>
 	- You should see the file verbose.lua in directory `/opt/app-root/src/src`
 
+oc env dc/apicast APICAST_MODULE=/opt/app-root/src/src/verbose.lua #set env variable
+
 Send request
 curl "http://localhost:80/endpoint?user_key=4e8237d98cdd7072e4fb5f771db35d01"
 
