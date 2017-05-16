@@ -3,7 +3,9 @@ oc new-project 3scalegateway
 
 oc new-build https://github.com/VinayBhalerao/custom-gateway.git --strategy=docker
 
-oc secret new-basicauth apicast-configuration-url-secret --password=https://aa6a9aca45a4ee268d0ea23fceb869f5@foobar-admin.3scale.net
+oc secret new-basicauth apicast-configuration-url-secret --password=https://<access_token>@3scaleportal-admin.3scale.net
+
+oc get is/custom-gateway #Get image name
 
 oc new-app -f https://raw.githubusercontent.com/3scale/apicast/v3.0.0/openshift/apicast-template.yml -p IMAGE_NAME=172.30.26.75:5000/apicast-gateway/custom-gateway
 
