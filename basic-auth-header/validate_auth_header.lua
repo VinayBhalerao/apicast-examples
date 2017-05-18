@@ -1,4 +1,3 @@
-
 local apicast = require('apicast')
 local configuration_loader = require('configuration_loader').new()
 local proxy = require 'proxy'
@@ -21,7 +20,7 @@ local function validate_auth_header()
 	  local cjson = require "cjson"
 	  local res = ngx.location.capture("/validate-auth-endpoint")
 	  local value = cjson.decode(res.body)
-    
+
 	  if res.status ~= 200 or value.Valid ~= true then
 	    ngx.exit(ngx.HTTP_UNAUTHORIZED)
 	  end

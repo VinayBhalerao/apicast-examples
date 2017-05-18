@@ -1,5 +1,4 @@
-
-cal apicast = require('apicast')
+local apicast = require('apicast')
 local configuration_loader = require('configuration_loader').new()
 local proxy = require 'proxy'
 
