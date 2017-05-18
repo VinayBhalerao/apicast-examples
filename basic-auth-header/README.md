@@ -16,7 +16,7 @@ Copy the `apicast.conf` and `validate_auth_header` in directory #It has the logi
 
 Start the gateway using openresty
 
-THREESCALE_PORTAL_ENDPOINT=https://f73d8b5f73902db56f70fa633e221ce9828d8bf98b40e95e59f5b44d85106c66@foobar-admin.3scale.net \
+THREESCALE_PORTAL_ENDPOINT=https://<access_token>@portal-admin.3scale.net \
 APICAST_MODULE=(pwd)/apicast/src/validate_auth_header.lua \
 APICAST_LOG_LEVEL=debug \
 bin/apicast -v -v
