@@ -20,7 +20,7 @@ git clone git@github.com:3scale/apicast.git
 
 Goto directory `apicast/conf.d` and override `apicast.conf` with the one from repo
 
-Copy `validate_auth_header` in directory `apicast/src` #It has the logic to verify auth header with IDP
+Copy `validate_auth_header.lua` in directory `apicast/src` #It has the logic to verify auth header with IDP
 
 Start the gateway using openresty
 
@@ -28,5 +28,4 @@ THREESCALE_PORTAL_ENDPOINT=https://<access_token>@portal-admin.3scale.net \
 APICAST_MODULE=(pwd)/apicast/src/validate_auth_header.lua \
 APICAST_LOG_LEVEL=debug \
 bin/apicast -v -v
-
-```sh
+```
