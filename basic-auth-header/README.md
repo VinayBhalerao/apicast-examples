@@ -4,10 +4,13 @@ Your client app sends Basic Authorization header `Authorization: Basic 123456` r
 
 ## Worflow
 ```sh
-Request `curl "http://localhost:8080/pricing?user_key=4e8237d98cdd7072e4fb5f771db35d01" -H "Authorization: Basic dmluYXk6dmluYXkxMjM=` is send to APIcast 
-APIcast extracts the `Authorization` header and verify with Identity's provider authorization endpoint
-If 200OK, then the `user_key` validation happens with 3scale SAAS backend
-If 200OK, then the request is proxied to API backend
+1. Request `curl "http://localhost:8080/pricing?user_key=4e8237d98cdd7072e4fb5f771db35d01" -H "Authorization: Basic dmluYXk6dmluYXkxMjM=` is send to APIcast 
+
+2. APIcast extracts the `Authorization` header and verify with Identity's provider authorization endpoint
+
+3. If 200OK, then the `user_key` validation happens with 3scale SAAS backend
+
+4. If 200OK, then the request is proxied to API backend
 ```
 
 ## Steps
