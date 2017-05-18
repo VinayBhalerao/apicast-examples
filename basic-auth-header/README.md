@@ -15,7 +15,12 @@ Your client app sends Basic Authorization header `Authorization: Basic 123456` r
 
 ## Steps
 ```sh
-Copy the `apicast.conf` and `validate_auth_header` in directory #It has the logic to verify auth header with IDP
+
+git clone git@github.com:3scale/apicast.git
+
+Goto directory `apicast/conf.d` and override `apicast.conf` with the one from repo
+
+Copy `validate_auth_header` in directory `apicast/src` #It has the logic to verify auth header with IDP
 
 Start the gateway using openresty
 
