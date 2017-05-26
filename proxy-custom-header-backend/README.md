@@ -13,7 +13,7 @@ Below are the steps to follow to override existing `apicast.conf` with this addi
 2. Apicast internally adds `X-Request-Id` while proxy_pass to API backend
 3. Your API backend receives header in following format `X-Request-Id: 20746-1495732170.598-127.0.0.1-127`
 ```
-## Steps
+## Steps (Openshift)
 
 ```sh
 Get the `apicast.conf` from the directory.
@@ -43,8 +43,21 @@ vi /opt/app-root/src/conf.d/apicast.conf ##verify if `X-Request-Id` change is pr
 
 ```
 
-## Approach 2
+## Approach 2 (Openshift)
 
 ```sh
 If you are familiar with `Dockerfile` it will be very easy to create a dockerfile and copy the customized `apicast.conf` inside a container. Sample example [here](https://github.com/VinayBhalerao/apicast-examples/tree/master/dockerfile-build) 
+```
+
+## Steps (Docker)
+
+```sh
+
+Place the `apicast.conf` in directory
+
+docker run --name apicast --rm -p 8080:8080 \
+-v $(pwd)/apicast.conf:/opt/app-root/src/conf.d/apicast.conf \
+-e THREESCALE_PORTAL_ENDPOINT=https://<access_token>@portal-admin.3scale.net \
+-e APICAST_LOG_LEVEL=debug \
+registry.access.redhat.com/3scale-amp20/apicast-gateway
 ```
