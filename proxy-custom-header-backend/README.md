@@ -3,7 +3,7 @@
 ```sh
 Your backend expects a header `X-Request-ID` from gateway with every API request invoking the backend service. The header can have information eg: `timestamp + remote_address + request_length` and as provider, you would like to monitor this for internal purpose. Additional variables can be found from nginx [docs](http://nginx.org/en/docs/http/ngx_http_core_module.html#variables)
 
-Below are the steps to follow to override existing `apicast.conf` with this additional feature. Line 64 of `apicast.conf` is the additional line.
+Below are the steps to follow to override existing `apicast.conf` with this additional feature. Line 94 of `apicast.conf` is the additional line.
 ```
 
 ## Worflow
