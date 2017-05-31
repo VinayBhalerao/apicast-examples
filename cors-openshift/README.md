@@ -24,5 +24,5 @@ oc rsh <apicast-podname>
 
 ls /opt/app-root/src/src/ #inside the pod. verify if `cors.lua` is present.
 
-oc env dc/apicast APICAST_MODULE=/opt/app-root/src/src/verbose.lua #set env variable
+oc env dc/apicast APICAST_MODULE=/opt/app-root/src/src/cors.lua #set env variable
 ```
