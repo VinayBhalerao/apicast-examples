@@ -30,7 +30,7 @@ Add a subPath to the `volumeMounts`. This should look like below
 
 volumeMounts:
         - mountPath: /opt/app-root/src/conf.d/apicast.conf
-          name: apicast-custom
+          name: apicast
           subPath: apicast.conf
 
 Save and exit
